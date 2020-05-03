@@ -6,6 +6,6 @@ USER node
 RUN npm install
 COPY --chown=node:node . .
 ENV NODE_ENV=production
-ENV PORT=4000
-CMD node index.js
+ENV PORT=8080
+CMD node dist/index.js
 EXPOSE $PORT

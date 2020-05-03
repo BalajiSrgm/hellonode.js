@@ -28,7 +28,7 @@ else db = "mongodb://localhost:".concat(process.env.MG_PORT, "/local");
 var app = express();
 app.use('/graphql', graphqlHTTP({
   schema,
-  rootValue: rootValue,
+  rootValue: rootValue.default,
   graphiql: true
 })); // Connect to MongoDB with Mongoose.
 

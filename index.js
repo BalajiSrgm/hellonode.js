@@ -13,6 +13,7 @@ const typeDefs = require('./src/graphql/typeDefs');
 const rootValue = require('./src/graphql/resolvers');
 
 const schema = buildSchema(typeDefs.default);
+let db;
 if(process.env.MG_USER) {
   db = `mongodb://${process.env.MG_USER}:${process.env.MG_PWD}@${process.env.MG_HOST}:${process.env.MG_PORT}/${process.env.MG_DB_NAME}`;
 }
@@ -20,7 +21,7 @@ else db = "mongodb://localhost:".concat(process.env.MG_PORT, "/local");
 const app = express();
 app.use('/graphql', graphqlHTTP({
   schema,
-  rootValue,
+  rootValue: rootValue.default,
   graphiql: true,
 }));
 

@@ -1,0 +1,24 @@
+type Event {
+  _id: String,
+	title: String,
+	description: String,
+	start_date: Date,
+	end_date: Date,
+	addressId: Date,
+	parentId: ID,
+	createdBy: String,
+	lastUpdated: Date,
+}
+
+  type Query {
+    event(id: String!): Event
+    events: [Event]
+  }
+  type Mutation {
+    addEvent(id: String!, name: String!, email: String!): User
+    editEvent(id: String, name: String, email: String): User
+    deleteEvent(id: String, name: String, email: String): User
+  }
+  type Subscription {
+    newUser(id: String!): User
+  }

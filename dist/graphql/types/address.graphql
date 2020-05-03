@@ -1,0 +1,15 @@
+type Address {
+    address1: String
+    address2: String
+    address3: String
+    city: String
+    state: String
+    Country: String
+    postalCode: String
+    geoLocation: GeoLocation
+}
+
+type GeoLocation {
+    lat: Float
+    lon: Float
+}

@@ -28,11 +28,13 @@ mongoose
     db,
     {
       useCreateIndex: true,
-      useNewUrlParser: true
+      useNewUrlParser: true,
+      useUnifiedTopology: true
     }
   )
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
   mongoose.set('debug', true);
 app.listen(process.env.APP_PORT || 4000);
+console.log('<><>db', db);
 console.log(`Running a GraphQL API server at localhost:${process.env.APP_PORT || 4000}/graphql`);

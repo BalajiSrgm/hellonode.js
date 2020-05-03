@@ -34,6 +34,5 @@ mongoose
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.log(err));
   mongoose.set('debug', true);
-
 app.listen(process.env.APP_PORT || 4000);
-console.log('Running a GraphQL API server at localhost:4000/graphql');
+console.log(`Running a GraphQL API server at localhost:${process.env.APP_PORT || 4000}/graphql`);

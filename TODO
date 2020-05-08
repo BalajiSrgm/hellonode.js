@@ -1,0 +1,6 @@
+logger - winston
+subscription logic (redis pub/sub, message broker based subscription)
+jwt handle
+data loader
+apollo tracing
+mongoose to mongoDB library change

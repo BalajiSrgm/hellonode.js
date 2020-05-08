@@ -14,5 +14,5 @@ scalar Date
     deleteUser(id: String, name: String, email: String): User
   }
   type Subscription {
-    newUser: User
+    newUser(id: String!): User
   }

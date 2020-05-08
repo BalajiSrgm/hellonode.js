@@ -19,6 +19,3 @@ type Event {
     editEvent(id: String, name: String, email: String): User
     deleteEvent(id: String, name: String, email: String): User
   }
-  type Subscription {
-    newUser(id: String!): User
-  }
